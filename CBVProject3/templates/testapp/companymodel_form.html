@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+<h1> New Employees Inserting </h1>
+<div class="container">
+    <form method="post">
+        <p>  &#3432  Company name must be uppercase </p>
+        {{form.as_p }}
+        {% csrf_token %}
+
+        <input type="submit" class="btn btn-success" value=" Inserted">
+
+
+    </form>
+</div>
+</body>
+</html>

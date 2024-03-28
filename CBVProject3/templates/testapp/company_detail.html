@@ -1,0 +1,43 @@
+
+
+<!-- company_detail.html
+    user choice it displays employee names
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Employees</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <style>
+
+        div{
+
+        padding:10px;
+        }
+    </style>
+
+
+</head>
+<body>
+<h1>{{ employees.0.company }} Employees</h1>
+
+<ul>
+    {% for employee in employees %}
+
+    <li> <a href="/{{employee.id}}">{{ employee.ename }} </a> </li>
+
+    {% endfor %}
+</ul>
+<div>
+<a class="btn btn-success" href="/create" > Inserting  New Employee</a>
+
+<a class="btn btn-secondary" href="{% url 'comp_list' %}"> Back </a>
+</div>
+
+</body>
+</html>

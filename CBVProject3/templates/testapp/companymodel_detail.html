@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+     <style>
+
+         #id1 {
+             padding: 10px;
+             margin:10px 10px 100px 24% ;
+          }
+
+     </style>
+</head>
+<body>
+<div class="container">
+    <h1> {{companymodel.ename}}  Employee Information</h1>
+
+
+<ul>
+    <li>COMPANY NAME: <STRONG> {{  companymodel.company }}</STRONG> </li>
+    <li>EMPLOYEE NAME: <STRONG> {{  companymodel.ename }}</STRONG> </li>
+    <li>EMPLOYEE ID: <STRONG> {{ companymodel.eid }}</STRONG> </li>
+    <li>EMPLOYEE EMAIL: <STRONG> {{  companymodel.eemail }}</STRONG> </li>
+    <li>EMPLOYEE CONTACT: <STRONG> {{  companymodel.ephn }}</STRONG> </li>
+    <li>EMPLOYEE SALARY: <STRONG> {{  companymodel.esal }}</STRONG> </li>
+
+
+</ul>
+
+</div>
+
+<!-- update button-->
+<div class="container">
+<a class="btn btn-warning" href="/update/{{companymodel.id}}"> Update This Employee</a>
+
+<!-- delete button-->
+
+<a class="btn btn-warning" href="/delete/{{companymodel.id}}"> Delete This Employee</a>
+
+<!-- back button-->
+
+</div>
+<a  id="id1"  class="btn btn-secondary" href="{% url 'comp_list' %}" > Back To Main Page </a>
+
+
+</body>
+</html>
